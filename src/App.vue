@@ -175,7 +175,10 @@ const defaultRawColors = {
   },
 };
 
-const currentTheme = useStorage('currentTheme', defaultRawColors);
+const currentTheme = useStorage(
+  'currentTheme',
+  structuredClone(defaultRawColors),
+);
 const vTheme = useTheme();
 const customColors = useStorage('customColors', []);
 const defaultVuetifyThemes = structuredClone(toRaw(vTheme.themes.value));
@@ -237,7 +240,7 @@ function addColor(colorName) {
 }
 
 function reset() {
-  currentTheme.value = defaultRawColors;
+  currentTheme.value = structuredClone(defaultRawColors);
   customColors.value = [];
 }
 
