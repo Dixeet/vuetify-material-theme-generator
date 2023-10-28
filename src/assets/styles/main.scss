@@ -1,0 +1,33 @@
+@use 'vuetify/styles' as v;
+
+.content {
+  > :is(div,p,h1,h2,h3,h4,h5,hr):not(.no-content) {
+    margin-bottom: 1rem;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.text-body-3 {
+  @extend .text-body-2;
+  font-size: 0.8rem !important;
+  line-height: 1.2rem;
+}
+
+.text-body-4 {
+  @extend .text-body-2;
+  font-size: 0.75rem !important;
+  line-height: 1.1rem;
+}
+
+:root {
+--app-border: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
+}

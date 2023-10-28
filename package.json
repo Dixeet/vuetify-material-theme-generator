@@ -1,0 +1,68 @@
+{
+  "name": "vuetify-m3-theme-generator",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "prettier": "prettier . --write --ignore-path ./package-lock.json"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2022": true,
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": "latest"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/vue3-recommended",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": "error"
+    },
+    "overrides": [
+      {
+        "files": [
+          "src/pages/**/*.vue"
+        ],
+        "rules": {
+          "vue/multi-word-component-names": "off"
+        }
+      }
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "printWidth": 80,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "@material/material-color-utilities": "^0.2.7",
+    "@mdi/js": "^7.3.67",
+    "@vueuse/core": "^10.5.0",
+    "json5": "^2.2.3",
+    "vue": "^3.3.4",
+    "vuetify": "^3.3.21"
+  },
+  "devDependencies": {
+    "@rodrive/console-vlog": "^1.0.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.3",
+    "vite": "^4.4.5",
+    "vite-plugin-vuetify": "^1.0.2"
+  }
+}
